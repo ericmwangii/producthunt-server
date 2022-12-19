@@ -24,7 +24,9 @@ router.get("/api", async (request, response) => {
 
   const data = [...jumia, ...pigiame, ...jiji, ...kilimall];
 
-  response.json(data);
+  const data2 = data.splice(0, 20);
+
+  response.json(data2);
 });
 
 module.exports = router;
