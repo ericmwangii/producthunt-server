@@ -5,13 +5,12 @@ const api = require("./api");
 
 const PORT = process.env.PORT || 5000;
 
-const corsOptions = {
-  origin: "*",
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "https://product-hunt-next-beta.vercel.app/",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(
   express.urlencoded({
