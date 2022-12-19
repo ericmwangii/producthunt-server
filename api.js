@@ -24,7 +24,7 @@ router.get("/api", async (request, response) => {
 
   const data = [...jumia, ...pigiame, ...jiji, ...kilimall];
 
-  const data2 = data.splice(0, 20);
+  const data2 = data.splice(0, 40);
 
   response.json(data2);
 });
